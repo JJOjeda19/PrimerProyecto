@@ -8,15 +8,19 @@
 		<title>Astro Basics</title>
 	</head>
 	<body>
+
+		<header>
+			<nav>
+				<a href="/">Inicio</a>
+				<a href="/galeria">galeria</a>
+			</nav>
+		</header>
+
+		<!-- ESTA PARTE ES DONDE SE VAN A MOVER LAS VISTAS -->
 		<slot />
+
+		<footer>
+			Pie de Pagina
+		</footer>
 	</body>
 </html>
-
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
