@@ -1,5 +1,7 @@
 ---
 import Menu from "../components/Menu.astro";
+import PiedePagina from "../components/PiedePagina.astro";
+import '../styles/global.css'
 ---
 
 <!doctype html>
@@ -15,6 +17,6 @@ import Menu from "../components/Menu.astro";
 		<Menu/>
 		<!-- ESTA PARTE ES DONDE SE VAN A MOVER LAS VISTAS -->
 			<slot/>
-		<footer>Pie de Pagina</footer>
+		<PiedePagina />
 	</body>
 </html>
