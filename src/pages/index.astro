@@ -1,7 +1,28 @@
 ---
-import BannerPrincipal from '../components/BannerPrincipal.astro';
 import Layout from '../layouts/Layout.astro';
+import Banner from '../assets/Banni19Gal.jpg'
+import Mesa1 from '../assets/MesaTrab1.jpg'
 ---
 <Layout>
-	<BannerPrincipal />
+	<div class="pantalla-principal">
+		<div>
+			<div>
+				<h1>i19.Galeria:</h1>
+				<h2>El lugar para enmarcar tus mejores</h2>
+				<h2>recuerdos, en el tamaño y con la</h2>
+				<h2>calidad que mereces</h2>
+			</div>
+			<div>
+				<img src={Mesa1.src} alt="" width={150}>
+			</div>
+		</div>
+		<img src={Banner.src} alt="" width={200}>
+	</div>
 </Layout>
+
+<style>
+.pantalla-principal {
+	display: flex;
+	justify-content: space-between;
+}
+</style>
