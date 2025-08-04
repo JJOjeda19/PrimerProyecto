@@ -1,7 +1,71 @@
+
+<!-- P A G I N A   N O S O T R O S -->
+
+<!-- CONFIGURACION -->
 ---
 import Layout from '../layouts/Layout.astro';
+import Tarjeta from '../components/Tarjeta.astro';
+import Paisaje from '../assets/Paisaje1.jpg'
 ---
 
+<!-- CODIGO -->
 <Layout>
-	Esta es la Pagina de Quienes Somos
+	<div class="pantalla-nosotros">
+		<div class="slogan">
+			<div>			
+				<h2>Somos la mejor opcion para la personalizacion de ladecoracion de tus espacios.</h2>		
+			</div>
+			<div class="deslogan">
+				<h3>Contamos con un equipo de profesionales con experiencia en fotografia y  marqueteria para crear productos y diseños minimalistas que daran vida a tus espacios.</h3>
+			</div>		
+			<div>
+				<img src={Paisaje.src} alt="" width={150}>
+			</div>	
+		</div>				
+		<div>
+			<div class="tarjeta1-nosotros">
+				<Tarjeta titulo="NUESTRA POLITICA" 
+				descripcion="Enfoque a la atencion del Cliente, entendiendo sus requerimientos y generando  recomendaciones para la mejora y optimizacion de sus proyectos" />
+			</div>
+			<div class="tarjeta2-nosotros">
+				<Tarjeta titulo="NUESTRA VISION" 
+				descripcion="Ser una empresa referente a nivel nacional en la produccion de arte fotografico para la decoracion de espacios" />
+			</div>
+			<div class="tarjeta3-nosotros">
+				<Tarjeta titulo="NUESTRA MISION" 
+				descripcion="Enfoque dirijido a la satisfaccion del Cliente, cumpliendo y superando sus espectativas con nuestros productos y servicios." />
+			</div>
+		</div>
+	</div>
 </Layout>
+
+<!-- ESTILOS -->
+<style>
+.pantalla-nosotros {
+	display: flex;
+	justify-content: space-between;
+	padding: 1% 3%;
+}
+.slogan {
+	justify-content: space-between;
+	padding: 1% 0%;
+}
+.deslogan {
+	padding: 5% 0%;
+}
+.fotos {
+	padding: 2%;
+}
+.tarjeta1-nosotros {
+	justify-content: end;
+	/*padding: 2% 5%;*/
+}
+.tarjeta2-nosotros {
+	justify-content: end;
+	/*padding: 2% 15%;*/
+}
+.tarjeta3-nosotros {
+	justify-content: end;
+	/*padding: 2% 25%;*/
+}
+</style>
