@@ -5,37 +5,21 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Tarjeta from '../components/Tarjeta.astro';
-import Pepe1 from '../assets/Pepe.jpg'
-import Pepe2 from '../assets/PepeMarco.jpg'
-import Marcos1 from '../assets/Marcos1.jpg'
-import Marcos2 from '../assets/Marcos2.jpg'
-import Viejitos from '../assets/Viejitos.jpg'
+import Pepe1 from '../assets/Fotos-Pagina/Pepe.jpg'
+import Pepe2 from '../assets/Fotos-Pagina/PepeMarco.jpg'
+import Marcos1 from '../assets/Fotos-Pagina/Marcos1.jpg'
+import Marcos2 from '../assets/Fotos-Pagina/Marcos2.jpg'
+import Viejitos from '../assets/Fotos-Pagina/Viejitos.jpg'
 ---
 
 <!-- CODIGO -->
 <Layout>
 	<div class="pantalla-prod-serv">
-		<div class="tarjetas-pys">
-			<Tarjeta titulo="FOTOGRAFIAS ENMARCADAS" 
-			descripcion="Tenemos amplia variedad de fotografias de paisajes naturales y urbano, en variados formatos, enmarcadas y listas para decorar tus espacios." />
-			<div class="fotos">
-				<img src={Pepe1.src} alt="" width={150}>
-				<img src={Pepe2.src} alt="" width={200}>
-			</div>
-		</div>
-		<div class="tarjetas-pys">
-			<div class="fotos">
-				<img src={Marcos1.src} alt="" width={150}>
-				<img src={Marcos2.src} alt="" width={150}>
-			</div>
-			<Tarjeta titulo="MARQUETERIA" 
-			descripcion="Enmarcamos tus fotos familiares, afiches, lugares, mascotas y momentos; utilizando materiales naturales, en el formato que necesites." />
-		</div>
-		<div class="tarjetas-pys">
-			<Tarjeta titulo="RESTAURACION Y PERSONALIZACION" 
-			descripcion="Le damos nueva vida a tus fotos antiguas o dañadas, dejandolas listas para lucirlas en tu mesa o pared de recuerdos." />
-			<img src={Viejitos.src} alt="" width={400}>
-		</div>
+		<img src={Pepe1.src} alt="" width={150}>
+		<img src={Pepe2.src} alt="" width={200}>
+		<img src={Marcos1.src} alt="" width={150}>
+		<img src={Marcos2.src} alt="" width={150}>
+		<img src={Viejitos.src} alt="" width={400}>
 	</div>	
 </Layout>
 
