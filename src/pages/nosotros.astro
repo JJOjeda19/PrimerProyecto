@@ -4,6 +4,7 @@
 <!-- CONFIGURACION -->
 ---
 import Layout from '../layouts/Layout.astro';
+import { Icon } from 'astro-icon/components'
 import Tarjeta from '../components/Tarjeta.astro';
 import Paisaje from '../assets/Fotos-Pagina/Paisaje1.jpg'
 ---
@@ -13,7 +14,7 @@ import Paisaje from '../assets/Fotos-Pagina/Paisaje1.jpg'
 	<div class="pantalla-nosotros">
 		<div class="slogan">
 			<div>			
-				<h2>Somos la mejor opcion para la personalizacion de ladecoracion de tus espacios.</h2>		
+				<h2>Somos la mejor opcion para la personalizacion de la decoracion de tus espacios.</h2>		
 			</div>
 			<div class="deslogan">
 				<h3>Contamos con un equipo de profesionales con experiencia en fotografia y  marqueteria para crear productos y diseños minimalistas que daran vida a tus espacios.</h3>
@@ -23,6 +24,15 @@ import Paisaje from '../assets/Fotos-Pagina/Paisaje1.jpg'
 			</div>	
 		</div>				
 		<div>
+
+			<div class="contacto">
+                <Icon name="mdi:plane"
+                width={24}
+                height={24}
+                />
+                <!-- <p>+58 412.443.03.59</p> -->
+            </div>
+
 			<div class="tarjeta1-nosotros">
 				<Tarjeta titulo="NUESTRA POLITICA" 
 				descripcion="Enfoque a la atencion del Cliente, entendiendo sus requerimientos y generando  recomendaciones para la mejora y optimizacion de sus proyectos" />

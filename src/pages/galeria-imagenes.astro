@@ -4,38 +4,60 @@
 <!-- CONFIGURACION -->
 ---
 import Layout from '../layouts/Layout.astro';
-import Tarjeta from '../components/Tarjeta.astro';
-import Pepe1 from '../assets/Fotos-Pagina/Pepe.jpg'
-import Pepe2 from '../assets/Fotos-Pagina/PepeMarco.jpg'
-import Marcos1 from '../assets/Fotos-Pagina/Marcos1.jpg'
-import Marcos2 from '../assets/Fotos-Pagina/Marcos2.jpg'
-import Viejitos from '../assets/Fotos-Pagina/Viejitos.jpg'
+import Afi01 from '../assets/Carpeta-Galeria/Afi01.jpg'
+import Afi02 from '../assets/Carpeta-Galeria/Afi02.jpg'
+import Afi03 from '../assets/Carpeta-Galeria/Afi03.jpg'
+import Dog01 from '../assets/Carpeta-Galeria/Dog01.jpg'
+import Dog02 from '../assets/Carpeta-Galeria/Dog02.jpg'
+import Dog03 from '../assets/Carpeta-Galeria/Dog03.jpg'
+import Dog04 from '../assets/Carpeta-Galeria/Dog04.jpg'
+import Esc01 from '../assets/Carpeta-Galeria/Esc01.jpg'
+import Esc02 from '../assets/Carpeta-Galeria/Esc02.jpg'
+import Esc03 from '../assets/Carpeta-Galeria/Esc03.jpg'
+import Esc04 from '../assets/Carpeta-Galeria/Esc04.jpg'
+import Nat01 from '../assets/Carpeta-Galeria/Nat01.jpg'
+import Nat02 from '../assets/Carpeta-Galeria/Nat02.jpg'
+import Nat03 from '../assets/Carpeta-Galeria/Nat03.jpg'
+import Nat04 from '../assets/Carpeta-Galeria/Nat04.jpg'
+import Urb01 from '../assets/Carpeta-Galeria/Urb01.jpg'
+import Urb02 from '../assets/Carpeta-Galeria/Urb02.jpg'
+import Urb03 from '../assets/Carpeta-Galeria/Urb03.jpg'
+import Urb04 from '../assets/Carpeta-Galeria/Urb04.jpg'
 ---
 
 <!-- CODIGO -->
 <Layout>
-	<div class="pantalla-prod-serv">
-		<img src={Pepe1.src} alt="" width={150}>
-		<img src={Pepe2.src} alt="" width={200}>
-		<img src={Marcos1.src} alt="" width={150}>
-		<img src={Marcos2.src} alt="" width={150}>
-		<img src={Viejitos.src} alt="" width={400}>
+	<div class="pantalla-galeria">
+		<img src={Nat01.src} alt="" width={275}>
+		<img src={Nat02.src} alt="" width={275}>
+		<img src={Nat03.src} alt="" width={275}>
+		<img src={Nat04.src} alt="" width={275}>
+	</div>
+	<div class="pantalla-galeria">
+		<img src={Esc01.src} alt="" width={275}>
+		<img src={Esc02.src} alt="" width={275}>
+		<img src={Esc03.src} alt="" width={275}>
+		<img src={Esc04.src} alt="" width={275}>
+	</div>
+	<div class="pantalla-galeria">
+		<img src={Urb01.src} alt="" width={275}>
+		<img src={Urb02.src} alt="" width={275}>
+		<img src={Urb03.src} alt="" width={275}>
+		<img src={Urb04.src} alt="" width={275}>
+	</div>
+	<div class="pantalla-galeria">
+		<img src={Dog01.src} alt="" width={275}>
+		<img src={Dog02.src} alt="" width={275}>
+		<img src={Dog03.src} alt="" width={275}>
+		<img src={Dog04.src} alt="" width={275}>
 	</div>	
 </Layout>
 
 <!-- ESTILOS -->
 <style>
-.pantalla-prod-serv {
+.pantalla-galeria {
 	display: flex;
 	justify-content: space-between;
-}
-.tarjetas-pys {
-	padding: 0% 5%;
-	/*align-items: center;*/
-	}
-.fotos {
-	display: flex;
-	justify-content: center;
-	padding: 2%;
-}
+	padding: 20px;
+}	
 </style>
