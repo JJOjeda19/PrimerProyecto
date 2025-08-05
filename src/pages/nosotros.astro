@@ -6,7 +6,9 @@
 import Layout from '../layouts/Layout.astro';
 import { Icon } from 'astro-icon/components'
 import Tarjeta from '../components/Tarjeta.astro';
-import Paisaje from '../assets/Fotos-Pagina/Paisaje1.jpg'
+import Foto1 from '../assets/Carpeta-Galeria/Nat23.jpg'
+import Foto2 from '../assets/Carpeta-Galeria/Esc05.jpg'
+import Foto3 from '../assets/Carpeta-Galeria/Nat25.jpg'
 ---
 
 <!-- CODIGO -->
@@ -18,32 +20,31 @@ import Paisaje from '../assets/Fotos-Pagina/Paisaje1.jpg'
 			</div>
 			<div class="deslogan">
 				<h3>Contamos con un equipo de profesionales con experiencia en fotografia y  marqueteria para crear productos y diseños minimalistas que daran vida a tus espacios.</h3>
-			</div>		
-			<div>
-				<img src={Paisaje.src} alt="" width={150}>
-			</div>	
+			</div>
+			<div class="fotos">
+				<img src={Foto1.src} alt="" width={150}>
+				<img src={Foto2.src} alt="" width={100}>
+				<img src={Foto3.src} alt="" width={150}>
+			</div>
 		</div>				
 		<div>
-
-			<div class="contacto">
-                <Icon name="mdi:plane"
-                width={24}
-                height={24}
-                />
-                <!-- <p>+58 412.443.03.59</p> -->
-            </div>
-
 			<div class="tarjeta1-nosotros">
+				<Icon name="line-md:square"
+                width={12}/>
 				<Tarjeta titulo="NUESTRA POLITICA" 
 				descripcion="Enfoque a la atencion del Cliente, entendiendo sus requerimientos y generando  recomendaciones para la mejora y optimizacion de sus proyectos" />
 			</div>
 			<div class="tarjeta2-nosotros">
-				<Tarjeta titulo="NUESTRA VISION" 
-				descripcion="Ser una empresa referente a nivel nacional en la produccion de arte fotografico para la decoracion de espacios" />
-			</div>
-			<div class="tarjeta3-nosotros">
+				<Icon name="line-md:square"
+                width={12}/>
 				<Tarjeta titulo="NUESTRA MISION" 
 				descripcion="Enfoque dirijido a la satisfaccion del Cliente, cumpliendo y superando sus espectativas con nuestros productos y servicios." />
+			</div>
+			<div class="tarjeta3-nosotros">
+				<Icon name="line-md:square"
+                width={12}/>
+				<Tarjeta titulo="NUESTRA VISION" 
+				descripcion="Ser una empresa referente a nivel nacional en la produccion de arte fotografico para la decoracion de espacios" />
 			</div>
 		</div>
 	</div>
@@ -64,18 +65,20 @@ import Paisaje from '../assets/Fotos-Pagina/Paisaje1.jpg'
 	padding: 5% 0%;
 }
 .fotos {
-	padding: 2%;
+	display: flex;
+	justify-content: space-between;
+	padding: 2% 5%;
 }
 .tarjeta1-nosotros {
 	justify-content: end;
-	/*padding: 2% 5%;*/
+	padding: 1% 5%;
 }
 .tarjeta2-nosotros {
 	justify-content: end;
-	/*padding: 2% 15%;*/
+	padding: 1% 5%;
 }
 .tarjeta3-nosotros {
 	justify-content: end;
-	/*padding: 2% 25%;*/
+	padding: 1% 5%;
 }
 </style>
