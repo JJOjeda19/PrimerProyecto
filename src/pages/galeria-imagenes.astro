@@ -1,8 +1,7 @@
-
-<!-- P A G I N A   G A L E R I A   D E   I M A G E N E S -->
-
-<!-- CONFIGURACION -->
 ---
+// P A G I N A   G A L E R I A   D E   I M A G E N E S
+
+// CONFIGURACION
 import Layout from '../layouts/Layout.astro';
 import Afi01 from '../assets/Carpeta-Galeria/Afi01.jpg'
 import Afi02 from '../assets/Carpeta-Galeria/Afi02.jpg'
@@ -27,37 +26,131 @@ import Urb04 from '../assets/Carpeta-Galeria/Urb04.jpg'
 
 <!-- CODIGO -->
 <Layout>
-	<div class="pantalla-galeria">
-		<img src={Nat01.src} alt="" width={275}>
-		<img src={Nat02.src} alt="" width={275}>
-		<img src={Nat03.src} alt="" width={275}>
-		<img src={Nat04.src} alt="" width={275}>
+	<!-- Slider main container -->
+	<div class="swiper">
+  		<!-- Additional required wrapper -->
+  		<div class="swiper-wrapper">
+    		<!-- Slides -->
+   			<div class="swiper-slide">
+				<img src={Nat01.src} alt="" width={250}>
+			</div>
+    		<div class="swiper-slide">
+				<img src={Nat02.src} alt="" width={250}>
+			</div>
+    		<div class="swiper-slide">
+				<img src={Nat03.src} alt="" width={250}>
+			</div>
+			<div class="swiper-slide">
+				<img src={Nat04.src} alt="" width={250}>
+			</div>
+			<div class="swiper-slide">
+				<img src={Esc01.src} alt="" width={250}>
+			</div>
+			<div class="swiper-slide">
+				<img src={Esc02.src} alt="" width={250}>
+			</div>
+			<div class="swiper-slide">
+				<img src={Esc03.src} alt="" width={250}>
+			</div>
+			<div class="swiper-slide">
+				<img src={Esc04.src} alt="" width={250}>
+			</div>
+			<div class="swiper-slide">
+				<img src={Urb01.src} alt="" width={250}>
+			</div>
+			<div class="swiper-slide">
+				<img src={Urb02.src} alt="" width={250}>
+			</div>
+			<div class="swiper-slide">
+				<img src={Urb03.src} alt="" width={250}>
+			</div>
+			<div class="swiper-slide">
+				<img src={Urb04.src} alt="" width={250}>
+			</div>
+			<div class="swiper-slide">
+				<img src={Dog01.src} alt="" width={250}>
+			</div>
+			<div class="swiper-slide">
+				<img src={Dog02.src} alt="" width={250}>
+			</div>
+			<div class="swiper-slide">
+				<img src={Dog03.src} alt="" width={250}>
+			</div>
+			<div class="swiper-slide">
+				<img src={Dog04.src} alt="" width={250}>
+			</div>
+		</div>
 	</div>
-	<div class="pantalla-galeria">
-		<img src={Esc01.src} alt="" width={275}>
-		<img src={Esc02.src} alt="" width={275}>
-		<img src={Esc03.src} alt="" width={275}>
-		<img src={Esc04.src} alt="" width={275}>
+  <!-- If we need pagination -->
+  	<div 
+  		class="swiper-pagination">
 	</div>
-	<div class="pantalla-galeria">
-		<img src={Urb01.src} alt="" width={275}>
-		<img src={Urb02.src} alt="" width={275}>
-		<img src={Urb03.src} alt="" width={275}>
-		<img src={Urb04.src} alt="" width={275}>
+
+  <!-- If we need navigation buttons -->
+  	<div 
+		class="swiper-button-prev">
 	</div>
-	<div class="pantalla-galeria">
-		<img src={Dog01.src} alt="" width={275}>
-		<img src={Dog02.src} alt="" width={275}>
-		<img src={Dog03.src} alt="" width={275}>
-		<img src={Dog04.src} alt="" width={275}>
-	</div>	
+  	<div 
+		class="swiper-button-next">
+	</div>
+
+  <!-- If we need scrollbar -->
+  	<div 
+		class="swiper-scrollbar">
+	</div>
+</div>
 </Layout>
 
-<!-- ESTILOS -->
+<!-- ESTILOS CODIGO CSS -->
 <style>
 .pantalla-galeria {
 	display: flex;
 	justify-content: space-between;
-	padding: 20px;
-}	
+	padding: 18px;
+	background-color: rgb(81, 57, 38);
+	/*display: grid;*/
+	/*grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));*/
+}
+img {
+	width: 100%;padding: 10px;
+	height: 400px;
+	object-fit: cover;
+}
 </style>
+
+<!-- CODIGO JAVA-SCRIPT -->
+<script>
+// core version + navigation, pagination modules:
+import Swiper from 'swiper'
+import { Navigation, Pagination } from 'swiper/modules'
+// import Swiper and modules styles
+import 'swiper/css'
+import 'swiper/css/navigation'
+import 'swiper/css/pagination'
+
+// init Swiper:
+const swiper = new Swiper('.swiper', {
+  // configure Swiper to use modules
+  modules: [Navigation, Pagination],
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+  slidesPerView: 4,
+});
+</script>

@@ -1,8 +1,7 @@
-
-<!-- P A G I N A   P R O D U C T O S -->
-
-<!-- CONFIGURACION -->
 ---
+// P A G I N A   P R O D U C T O S
+
+// CONFIGURACION
 import Layout from '../layouts/Layout.astro';
 import Tarjeta from '../components/Tarjeta.astro';
 import Pepe1 from '../assets/Fotos-Pagina/Pepe.jpg'
@@ -16,11 +15,14 @@ import Viejitos from '../assets/Fotos-Pagina/Viejitos.jpg'
 <Layout>
 	<div class="pantalla-prod-serv">
 		<div class="tarjetas-pys">
-			<Tarjeta titulo="FOTOGRAFIAS ENMARCADAS" 
-			descripcion="Tenemos amplia variedad de fotografias de paisajes naturales y urbano, en variados formatos, enmarcadas y listas para decorar tus espacios." />
+			<Tarjeta
+				el_icono="mdi:view-grid-outline"				
+				titulo="FOTOGRAFIAS ENMARCADAS" 
+				descripcion="Tenemos amplia variedad de fotografias de paisajes naturales y urbano, en variados formatos, enmarcadas y listas para decorar tus espacios."
+				/>
 			<div class="fotos">
 				<img src={Pepe1.src} alt="" width={150}>
-				<img src={Pepe2.src} alt="" width={200}>
+				<img src={Pepe2.src} alt="" width={180}>
 			</div>
 		</div>
 		<div class="tarjetas-pys">
@@ -28,13 +30,21 @@ import Viejitos from '../assets/Fotos-Pagina/Viejitos.jpg'
 				<img src={Marcos1.src} alt="" width={150}>
 				<img src={Marcos2.src} alt="" width={150}>
 			</div>
-			<Tarjeta titulo="MARQUETERIA" 
-			descripcion="Enmarcamos tus fotos familiares, afiches, lugares, mascotas y momentos; utilizando materiales naturales, en el formato que necesites." />
+			<Tarjeta
+				el_icono="mdi:view-dashboard-outline"			
+				titulo="MARQUETERIA" 
+				descripcion="Enmarcamos tus fotos familiares, afiches, lugares, mascotas y momentos; utilizando materiales naturales, en el formato que necesites."
+				/>
 		</div>
 		<div class="tarjetas-pys">
-			<Tarjeta titulo="RESTAURACION Y PERSONALIZACION" 
-			descripcion="Le damos nueva vida a tus fotos antiguas o dañadas, dejandolas listas para lucirlas en tu mesa o pared de recuerdos." />
-			<img src={Viejitos.src} alt="" width={400}>
+			<Tarjeta
+				el_icono="mdi:view-dashboard-edit-outline"			
+				titulo="RESTAURACION Y PERSONALIZACION" 
+				descripcion="Le damos nueva vida a tus fotos antiguas o dañadas, dejandolas listas para lucirlas en tu mesa o pared de recuerdos."
+				/>
+			<div class="fotos">
+				<img src={Viejitos.src} alt="" width={250}>
+			</div>
 		</div>
 	</div>	
 </Layout>
@@ -44,14 +54,22 @@ import Viejitos from '../assets/Fotos-Pagina/Viejitos.jpg'
 .pantalla-prod-serv {
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
+	background-color: beige;
+	padding: 35px;
 }
 .tarjetas-pys {
-	padding: 0% 5%;
-	/*align-items: center;*/
+	padding: 10px 5px;
 	}
 .fotos {
 	display: flex;
 	justify-content: center;
-	padding: 2%;
+	padding: 10px;
+}
+.fotos img {
+	padding: 20px;
+	box-shadow: 4px 5px 5px 0px rgba(75,72,72,0.75);
+	-webkit-box-shadow: 4px 5px 5px 0px rgba(75,72,72,0.75);
+	-moz-box-shadow: 4px 5px 5px 0px rgba(75,72,72,0.75);
 }
 </style>

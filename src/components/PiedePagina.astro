@@ -1,73 +1,50 @@
-
-<!-- C O M P O N E N T E   P I E   D E   P A G I N A -->
-
-<!-- HERRAMIENTAS -->
 ---
+// C O M P O N E N T E   P I E   D E   P A G I N A
+
+// HERRAMIENTAS
 import Layout from '../layouts/Layout.astro';
+import Tarjeta from '../components/Tarjeta.astro';
 import { Icon } from 'astro-icon/components'
 ---
 
 <!-- CODIGO -->
 <footer>
-<p>
-	----------------------------------------------------------------------------------------------
-	----------------------------------------------------------------------------------------------
-</p>
     <div class="pie-pagina">
         <ul>
-            <li>Derechos reservados 2025 © I19 Galeria - RIF J-00000000-0</li>
-            <li>Avenida 100 con calle 119 de El Viñedo. Valencia, Venezuela 2005.</li>
+            <li>Derechos Reservados 2025 © I19 Galeria - RIF J-00000000-0</li>
+            <li>Avenida 100 con Calle 119 de El Viñedo. Valencia, Venezuela 2005</li>
             <li>Horario: Lunes a Viernes de 8:00am a 5:00pm</li>
         </ul>
         <div>
-            <div class="contacto">
-                <Icon name="line-md:phone"
-                width={24}
-                height={24}
-                />
-                <p>+58 412.443.03.59</p>
-            </div>
-            <div class="contacto">    
-                <Icon name="line-md:email"
-                width={24}
-                height={24}
-                />
-                <p>i19.galeria@gmail.com</p>
-            </div>
+            <Tarjeta
+				el_icono="line-md:phone"				
+				titulo="+58 412.443.03.59" 
+				/>                     
+            <Tarjeta
+				el_icono="line-md:email"				
+				titulo="i19.galeria@gmail.com" 
+				/>                
         </div>
         <div>
-            <div class="contacto">
-                <Icon name="line-md:instagram"
-                width={24}
-                height={24}
-                />
-                <p>i19.galeria.instagram</p>
-            </div>
-            <div class="contacto"> 
-                <Icon name="line-md:facebook"
-                width={24}
-                height={24}
-                />
-                <p>i19.galeria.facebook</p>    
-            </div>
+            <Tarjeta
+				el_icono="line-md:instagram"		
+				titulo="@i19.galeria.instagram" 
+				/>                     
+            <Tarjeta
+				el_icono="line-md:facebook"				
+				titulo="i19.galeria.facebook" 
+				/>
         </div>
         <div>
-            <div class="contacto">   
-                <Icon name="line-md:twitter"
-                width={24}
-                height={24}
-                /> 
-                <p>i19.galeria.twitter</p>
-            </div>
-            <div class="contacto"> 
-                <Icon name="mdi:whatsapp"
-                width={24}
-                height={24}
-                />
-                <p>+58 412.443.03.59 </p>
-            </div>
-        </div>
-        </div>
+            <Tarjeta
+				el_icono="line-md:twitter"		
+				titulo="@i19.galeria.twitter" 
+				/>                     
+            <Tarjeta
+				el_icono="mdi:whatsapp"				
+				titulo="+58 412.443.03.59" 
+				/>
+        </div>        
     </div>
 </footer>
 
@@ -77,13 +54,15 @@ import { Icon } from 'astro-icon/components'
 	display: flex;
 	justify-content: space-between;
     align-items: center;
-    padding: 1% 2%;
-    color: gray;
+    padding: 25px 40px;   
+    font-size: 12px;    	
+	color: white;
+    background-color: lightseagreen;
 }
 .contacto {
 	display: flex;
 	justify-content: space-between;
-    /*gap: 5;*/
-    color: black;
+    font-size: 14px;
+    font-weight: 400;
 }
 </style>

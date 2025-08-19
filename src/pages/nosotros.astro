@@ -1,8 +1,7 @@
-
-<!-- P A G I N A   N O S O T R O S -->
-
-<!-- CONFIGURACION -->
 ---
+// P A G I N A   N O S O T R O S
+
+// CONFIGURACION
 import Layout from '../layouts/Layout.astro';
 import { Icon } from 'astro-icon/components'
 import Tarjeta from '../components/Tarjeta.astro';
@@ -28,29 +27,26 @@ import Foto3 from '../assets/Carpeta-Galeria/Nat25.jpg'
 			</div>
 		</div>				
 		<div>
-			<div class="icono-tarjeta">
-				<Icon name="mdi:file-document-edit"
-                width={64}/>
-				<div class="tarjeta1">
-					<Tarjeta titulo="NUESTRA POLITICA" 
-					descripcion="Enfoque a la atencion del Cliente, entendiendo sus requerimientos y generando  recomendaciones para la mejora y optimizacion de sus proyectos" />
-				</div>
+			<div class="icono-tarjeta ml-[0px]">
+				<Tarjeta
+					el_icono="mdi:file-document-edit"
+					titulo="NUESTRA POLITICA"					
+					descripcion="Enfoque a la atencion del Cliente, entendiendo sus requerimientos y generando  recomendaciones para la mejora y optimizacion de sus proyectos" 
+				/>
 			</div>
-			<div class="icono-tarjeta">
-				<Icon name="mdi:checkbox-marked"
-				width={64}/>
-				<div class="tarjeta2">
-					<Tarjeta titulo="NUESTRA MISION" 
-					descripcion="Objetivo dirijido a la satisfaccion del Cliente, cumpliendo y superando sus espectativas con nuestros productos y servicios." />
-				</div>
+			<div class="icono-tarjeta ml-[24px]">
+				<Tarjeta
+					el_icono="mdi:checkbox-marked"
+					titulo="NUESTRA MISION" 
+					descripcion="Objetivo dirijido a la satisfaccion del Cliente, cumpliendo y superando sus espectativas con nuestros productos y servicios."				
+				/>
 			</div>
-			<div class="icono-tarjeta">
-				<Icon name="mdi:checkbox-intermediate"
-                width={64}/>
-				<div class="tarjeta3">
-					<Tarjeta titulo="NUESTRA VISION" 
-					descripcion="Ser una empresa referente a nivel nacional en la produccion de arte fotografico para la decoracion de espacios" />
-				</div>
+			<div class="icono-tarjeta ml-[48px]">				
+				<Tarjeta
+					el_icono="mdi:checkbox-intermediate"
+					titulo="NUESTRA VISION"
+					descripcion="Ser una empresa referente a nivel nacional en la produccion de arte fotografico para la decoracion de espacios"
+				/>
 			</div>
 		</div>
 	</div>
@@ -62,39 +58,34 @@ import Foto3 from '../assets/Carpeta-Galeria/Nat25.jpg'
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	/*padding: 1% 3%;*/
+	background-color:beige;
+	padding: 38px;
 }
 .slogan {
+	font-size: 24px;
+	font-weight: bolt;
 	justify-content: space-between;
-	padding: 1% 0%;
+	padding: 5px 0px;
 }
 .deslogan {
-	padding: 5% 0%;
+	font-size: 16px;
+	font-weight: bolt;
+	color: darkslategrey;
+	padding: 5px 0px;
 }
 .fotos {
 	display: flex;
 	justify-content: space-between;
+	padding: 20px;
+}
+img {box-shadow: 4px 5px 5px 0px rgba(75,72,72,0.75);
+	-webkit-box-shadow: 4px 5px 5px 0px rgba(75,72,72,0.75);
+	-moz-box-shadow: 4px 5px 5px 0px rgba(75,72,72,0.75);
 }
 .icono-tarjeta {
 	display: flex;
 	justify-content: start;
 	align-items: start;
-	padding: 5px 50px;
-}
-.tarjeta1 {
-	/*justify-content: start;
-	align-items: start;
-	padding: 5px;*/
-}
-.tarjeta2 {
-	/*justify-content: start;
-	align-items: start;
-	padding: 5px;*/
-}
-.tarjeta3 {
-	/*display: flex;
-	justify-content: start;
-	align-items: center;
-	padding: 5px;*/
+	padding: 5px 16px;
 }
 </style>
